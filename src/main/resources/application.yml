@@ -1,0 +1,37 @@
+server:
+  port: 9500
+  servlet:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 4
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/star?serverTimezone=UTC&characterEncoding=UTF-8
+    username: starerp
+    password: starerp
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    check-template-location: true
+    mode: HTML
+    cache: false
+
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    
